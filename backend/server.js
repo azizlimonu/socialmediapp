@@ -22,7 +22,15 @@ app.use(express.json());
 app.use(fileUpload({ useTempFiles: true }));
 app.use(cors({ origin: clientURI }));
 
-// Routes
+// Router
+const authRouter=require('./routes/auth');
+const postRouter= require('./routes/post');
+const userRouter=require('./routes/user');
+
+// usage routes
+app.use('/api/auth',authRouter);
+app.use('/api/users',userRouter);
+app.use('/api/posts',postRouter);
 
 
 const startDB = async()=>{
