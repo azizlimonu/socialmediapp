@@ -20,7 +20,7 @@ app.use(xss());
 app.use(helmet());
 app.use(express.json());
 app.use(fileUpload({ useTempFiles: true }));
-app.use(cors({ origin: clientURL }));
+app.use(cors({ origin: clientURI }));
 
 // Routes
 
