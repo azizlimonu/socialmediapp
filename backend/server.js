@@ -22,6 +22,8 @@ app.use(express.json());
 app.use(fileUpload({ useTempFiles: true }));
 app.use(cors({ origin: clientURI }));
 
+// middleware
+
 // Router
 const authRouter=require('./routes/auth');
 const postRouter= require('./routes/post');
